@@ -19,7 +19,12 @@ OUT
       expect(second_line[:codes][0].name).to be(:underline)
       expect(second_line[:codes][1].name).to be(:red)
     end
-
   end
 
+
+
+
+  describe ".to_hash"
+  describe ".to_json"
+  describe ".to_html"
 end
