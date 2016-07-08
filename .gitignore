@@ -1,0 +1,9 @@
+/tmp
+/.yardoc/
+/doc/
+*.sw[op]
+/pkg/
+Gemfile.lock
+.bundle/
+vendor/
+coverage/
