@@ -32,6 +32,7 @@ module ANSIColor::Formatter
             buffer << scanner.scan(/./m) 
           end
         end
+        y << { text: buffer, codes: codes } if not buffer.empty?
       end
     end
   end
