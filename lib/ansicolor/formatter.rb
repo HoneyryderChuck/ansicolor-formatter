@@ -1,4 +1,5 @@
 require 'ansicolor/formatter/version'
+require 'json'
 require 'stringio'
 require 'strscan'
 require 'term/ansicolor'
@@ -31,6 +32,22 @@ module ANSIColor::Formatter
             buffer << scanner.scan(/./m) 
           end
         end
+      end
+    end
+  end
+
+  def to_hash(text)
+    Enumerator.new do |y|
+      with_codes(text).each do |line|
+        y << line.merge(codes: line[:codes].map(&:name))
+      end
+    end
+  end
+
+  def to_json(text)
+    Enumerator.new do |y|
+      to_hash(text).each do |line|
+        y << JSON.dump(line)
       end
     end
   end

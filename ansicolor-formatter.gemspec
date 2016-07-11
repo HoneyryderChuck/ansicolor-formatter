@@ -21,6 +21,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency             'term-ansicolor',     ">= 1.2.2"
   gem.add_development_dependency 'rspec',              "~> 3.0.0"
   gem.add_development_dependency 'rspec-html-matchers',"~> 0.7.0"
+  gem.add_development_dependency 'rspec-json_expectations', "~> 1.4.0"
   gem.add_development_dependency 'rake',               "~> 10.1.0"  
   gem.add_development_dependency 'yard',               "~> 0.8.7"
   gem.add_development_dependency 'simplecov',          "~> 0.7.1"

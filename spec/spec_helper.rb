@@ -5,6 +5,7 @@ require "bundler/setup"
 Bundler.require(:default, :test)
 require "ansicolor/formatter"
 
+require "rspec/json_expectations"
 require "rspec-html-matchers"
 
 Dir["./spec/support/**/*.rb"].sort.each {|f| require f}
